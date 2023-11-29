@@ -1,0 +1,27 @@
+Software Update Ports		|	Flash Location				Execution Location
+	-	CAN					|	-	Internal Flash
+	-	RS485/Uart			|	-	Internal Flash
+	-	GPRS/LTE			|	-	Internal Flash
+	-	Ethernet			|	-	External Flash
+	-	WiFi/BLE			|	-	Internal Flash
+	-	uSD Card			|	-	Internal Flash
+	-	USB HS DFU			|	-	Internal Flash
+----------------------------------------------------------
+Internal Flash Memory Organization
+	First stage bootloader
+	Second staege bootloader
+	User read/write area
+	0x0800 0000		0x0800 7FFF
+	0x0800 8000		0x0800 8FFF
+---------------------------------------------------------
+FMC flash bölgesi her zaman öncelikli application firmware alanı olarak kullanılacak. Farklı bir veri tutmayacak. QSPI flash alanıyla birebir offset ile başlangıç adreslerine sahip olacak. Yani EEPROM ve Bootloader
+gibi alanların boyutları birebir aynı olacak ve içerikleri de birbirlerinin kopyaları olacak. Aslında bir nevi shadow copy alanlar olacak.
+QSPI flash bölgesi her zaman ikinci öncelikli applcation firmware alanı olarak ve multimedia storage alanı olarak kullanılacak.
+
+Eğer harici bellekte OTA yazılımlarından herhangi biri yer alırsa bunu çalıştırmak biraz sorunlu olacak gibi. Zira harici bellekte hem okuma hem de yazma aynı anda pek mümkün değil. 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+First stage bootlaoder: MCU init olur ve önce fmc paralel flash init edilir. Device ID okunur. Eğer Device ID okunabilirse boot partition table olması gereken alanda aranır. Eğer bulunabilirse, oradan boot olur.
+Eğer bulamazsa, QSPI flash init edilir. ID okunur ve eğer okunabilirse boot partition table olması gereken alanda aranır. Eğer bulunabilirse oradan boot olur.
+Eğer bulamazsa second stage bootloader yüklenir.
+Second stage bootloader: Cihaz power up sonrasında CAN, RS485, USB HS DFU, uSD Card init edilir. Haberleşme portlarından uygun protokolde veri beklenir. Veri alındığında önce SDRAM e yazılır. Sonra veri CRC ile doğrulanır.
+Doğrulanan veri ilgili harici belleğe yazılır. Sonra System Reset yapılır.

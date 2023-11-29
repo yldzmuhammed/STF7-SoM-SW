@@ -1,0 +1,8 @@
+--cpu Cortex-M7.fp.sp
+".\out\flashprg.o"
+".\out\system_stm32f7xx.o"
+".\out\flashdev.o"
+--strict --scatter ".\Target.lin"
+--diag_suppress L6305 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Out\STF7SoM_PNOR.map" -o .\Out\STF7SoM_PNOR.axf

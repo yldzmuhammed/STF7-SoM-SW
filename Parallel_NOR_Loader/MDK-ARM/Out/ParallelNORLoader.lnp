@@ -1,0 +1,22 @@
+--cpu Cortex-M7.fp.sp
+".\out\flashprg.o"
+".\out\stf7som_nor.o"
+".\out\stf7som_fmc.o"
+".\out\stf7som_qspi.o"
+".\out\flashdev.o"
+".\out\system_stm32f7xx.o"
+".\out\stm32f7xx_hal.o"
+".\out\stm32f7xx_ll_fmc.o"
+".\out\stm32f7xx_hal_nor.o"
+".\out\stm32f7xx_hal_rcc.o"
+".\out\stm32f7xx_hal_pwr.o"
+".\out\stm32f7xx_hal_qspi.o"
+".\out\stm32f7xx_hal_dma.o"
+".\out\stm32f7xx_hal_gpio.o"
+".\out\stm32f7xx_hal_cortex.o"
+".\out\stm32f7xx_hal_rcc_ex.o"
+".\out\stm32f7xx_hal_pwr_ex.o"
+--strict --scatter ".\Target.lin"
+--diag_suppress L6305 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Out\ParallelNORLoader.map" -o .\Out\ParallelNORLoader.axf

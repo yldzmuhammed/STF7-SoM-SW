@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sf asdf, asdf, LIC=NHY74-F3D5J-48XFA-11UVQ-KKDDD-Y0BKW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.28.0.0
+Toolchain Path:  x:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.162.16.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+P:\YILDIZIoT\STF7-SoM\Software\Parallel_NOR_Loader\MDK-ARM\STF7SoM_PLDR.uvprojx
+Project File Date:  08/31/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'x:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'STF7SoM_PLDR'
+compiling FlashDev.c...
+compiling system_stm32f7xx.c...
+compiling stm32f7xx_hal.c...
+compiling stf7som_nor.c...
+..\..\Board Support Package\BSP\stf7som_nor.c(252): warning:  #1215-D: #warning directive: "After here, first WORD is ignoring and then address is increasing one step!"
+  #warning "After here, first WORD is ignoring and then address is increasing one step!"
+..\..\Board Support Package\BSP\stf7som_nor.c: 1 warning, 0 errors
+compiling FlashPrg.c...
+compiling stf7som_fmc.c...
+compiling stf7som_qspi.c...
+compiling stm32f7xx_ll_fmc.c...
+compiling stm32f7xx_hal_nor.c...
+compiling stm32f7xx_hal_rcc.c...
+compiling stm32f7xx_hal_pwr.c...
+compiling stm32f7xx_hal_gpio.c...
+compiling stm32f7xx_hal_dma.c...
+compiling stm32f7xx_hal_cortex.c...
+compiling stm32f7xx_hal_qspi.c...
+compiling stm32f7xx_hal_pwr_ex.c...
+compiling stm32f7xx_hal_rcc_ex.c...
+linking...
+Program Size: Code=25094 RO-data=4306 RW-data=28 ZI-data=304  
+After Build - User command #1: cmd.exe /C copy ".\Out\ParallelNORLoader.axf" "X:\Keil_v5\ARM\Flash\ParallelNORLoader.FLM"
+        1 file(s) copied.
+".\Out\ParallelNORLoader.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.12.0.pack
+                Keil.STM32F7xx_DFP.2.12.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STF7SoM_PLDR
+  x:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  x:\Keil_v5\Arm\Packs\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

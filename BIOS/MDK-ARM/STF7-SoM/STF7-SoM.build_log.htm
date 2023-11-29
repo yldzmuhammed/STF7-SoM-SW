@@ -1,0 +1,66 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: sf asdf, asdf, LIC=NHY74-F3D5J-48XFA-11UVQ-KKDDD-Y0BKW
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.28.0.0
+Toolchain Path:  x:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      Segger\JL2CM3.dll V2.99.36.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+P:\YILDIZIoT\STF7-SoM\Software\BIOS\MDK-ARM\STF7-SoM.uvprojx
+Project File Date:  09/13/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'x:\Keil_v5\ARM\ARMCC\Bin'
+*** Warning: You are compiling one or more files of source type C++ and have selected 'use MicroLIB'. MicroLIB does not support C++!
+  
+Build target 'STF7-SoM'
+linking...
+STF7-SoM\STF7-SoM.axf: Error: L6647E: The virtual function elimination information for i._ZN8touchgfx5Color20getColorFrom24BitRGBEhhh(mainscreenviewbase.o) incorrectly indicates that section .constdata__ZTVN8touchgfx8LCD16bppE(lcd16bpp.o), offset 52 is a relocation (to a virtual function or RTTI), but there is no relocation at that offset.
+STF7-SoM\STF7-SoM.axf: Warning: L6361W: Running VFE again, to produce better error messages.
+STF7-SoM\STF7-SoM.axf: Error: L6647E: The virtual function elimination information for i._ZN8touchgfx5Color20getColorFrom24BitRGBEhhh(mainscreenviewbase.o) incorrectly indicates that section .constdata__ZTVN8touchgfx8LCD16bppE(lcd16bpp.o), offset 52 is a relocation (to a virtual function or RTTI), but there is no relocation at that offset.
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 1 warning and 2 error messages.
+"STF7-SoM\STF7-SoM.axf" - 2 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.12.0.pack
+                Keil.STM32F7xx_DFP.2.12.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_STF7-SoM
+  x:\Keil_v5\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  x:\Keil_v5\Arm\Packs\Keil\STM32F7xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

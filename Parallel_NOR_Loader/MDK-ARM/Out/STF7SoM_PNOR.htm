@@ -1,0 +1,62 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\Out\STF7SoM_PNOR.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\Out\STF7SoM_PNOR.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Apr 13 05:21:26 2021
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[7]"></a>__asm___18_system_stm32f7xx_c_5d646a67____REV16</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, system_stm32f7xx.o(.rev16_text), UNUSED)
+
+<P><STRONG><a name="[8]"></a>__asm___18_system_stm32f7xx_c_5d646a67____REVSH</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, system_stm32f7xx.o(.revsh_text), UNUSED)
+
+<P><STRONG><a name="[9]"></a>__asm___18_system_stm32f7xx_c_5d646a67____RRX</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, system_stm32f7xx.o(.rrx_text), UNUSED)
+
+<P><STRONG><a name="[3]"></a>Polling</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, flashprg.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ProgramPage
+<LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EraseSector
+<LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EraseChip
+</UL>
+
+<P><STRONG><a name="[0]"></a>Init</STRONG> (Thumb, 264 bytes, Stack size 24 bytes, flashprg.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+</UL>
+
+<P><STRONG><a name="[a]"></a>UnInit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, flashprg.o(.text), UNUSED)
+
+<P><STRONG><a name="[2]"></a>EraseChip</STRONG> (Thumb, 206 bytes, Stack size 4 bytes, flashprg.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Polling
+</UL>
+
+<P><STRONG><a name="[4]"></a>EraseSector</STRONG> (Thumb, 196 bytes, Stack size 8 bytes, flashprg.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Polling
+</UL>
+
+<P><STRONG><a name="[5]"></a>ProgramPage</STRONG> (Thumb, 162 bytes, Stack size 20 bytes, flashprg.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Polling
+</UL>
+
+<P><STRONG><a name="[1]"></a>SystemInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, system_stm32f7xx.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClock
+</UL>
+<BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init
+</UL>
+
+<P><STRONG><a name="[b]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 188 bytes, Stack size 16 bytes, system_stm32f7xx.o(.text), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[6]"></a>SetSysClock</STRONG> (Thumb, 214 bytes, Stack size 12 bytes, system_stm32f7xx.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemInit
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>
